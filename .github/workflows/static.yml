@@ -19,4 +19,4 @@ jobs:
         build_configuration: production
         base_href: /Despliege-App-Angular
         deploy_branch: gh-pages
-        angular_dist_buil_folder: dist/Despliege-App-Angular
+        angular_dist_build_folder: dist/Despliege-App-Angular
