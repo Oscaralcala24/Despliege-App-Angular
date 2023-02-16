@@ -1,0 +1,22 @@
+# Documentacion de la acción utilizada para la compilación y despliegue:
+#h
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+  
+    runs-on: ubuntu:latest
+    
+    steps: 
+    - uses: action/checkout@v2
+    - name: Despliegue de la aplicación Angular en la rama gh-pages
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
+      with: 
+        github_access_token: ${{ secrets.ACCESS_TOKEN }}
+        build_configuration: production
+        base_href: /Despliege-App-Angular
+        deploy_branch: gh-pages
+        angular_dist_buil_folder: dist/Despliege-App-Angular
